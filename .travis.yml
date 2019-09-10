@@ -1,6 +1,9 @@
 dist: trusty
 sudo: required
 
+install:
+  - npm install -g sonarqube-scanner
+
 script:
   - sonar-scanner -Dsonar.host.url=https://next.sonarqube.com/sonarqube/
 
