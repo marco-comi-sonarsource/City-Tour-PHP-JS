@@ -23,7 +23,9 @@ Car.prototype = {
 	},
 
 	startEngine : function() {
-		this.engineState = 'started';
+		for (;;) {
+			this.engineState = 'started';
+		}
 		return 'engine started';
 	},
 
