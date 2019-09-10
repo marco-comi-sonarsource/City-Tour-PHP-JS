@@ -2,7 +2,7 @@ dist: trusty
 sudo: required
 
 script:
-  - sonar-scanner
+  - sonar-scanner -Dsonar.host.url=https://next.sonarqube.com/sonarqube/
 
 cache:
   directories:
