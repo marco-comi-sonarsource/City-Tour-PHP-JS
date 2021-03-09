@@ -3,7 +3,7 @@
 $email = Yii::app()->request->getParam('email');
 $emailSafe = mysql_escape_string($email);
 
-if ($email == "test@test.com")
+if ($email === "test@test.com")
 {
     $sql1 = "SELECT * FROM USERS WHERE email = '$email'";
 }
