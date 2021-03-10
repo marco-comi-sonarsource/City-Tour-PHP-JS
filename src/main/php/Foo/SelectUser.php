@@ -10,7 +10,7 @@ if ($email != '')
 }
 else 
 {
-    $sql1 = "SELECT * FROM USERS WHERE twitter = '$twitter'";
+    //$sql1 = "SELECT * FROM USERS WHERE twitter = '$twitter'";
 }
 $sql2 = "SELECT * FROM USERS WHERE email = '$emailSafe'";
 
