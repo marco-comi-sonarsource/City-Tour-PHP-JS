@@ -1,15 +1,16 @@
 <?php
 
 $email = Yii::app()->request->getParam('email');
+$twitter = Yii::app()->request->getParam('twitter');
 $emailSafe = mysql_escape_string($email);
 
-if ($email === "test@test.com")
+if ($email != '')
 {
     $sql1 = "SELECT * FROM USERS WHERE email = '$email'";
 }
 else 
 {
-    $sql1 = "SELECT * FROM USERS_TEST WHERE email = '$email'";
+    $sql1 = "SELECT * FROM USERS WHERE twitter = '$twitter'";
 }
 $sql2 = "SELECT * FROM USERS WHERE email = '$emailSafe'";
 
