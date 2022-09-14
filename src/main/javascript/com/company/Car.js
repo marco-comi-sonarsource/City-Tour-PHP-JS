@@ -1,3 +1,22 @@
+var settings = {
+    'foo'  : oof,
+    'bar' : rab,    // Noncompliant - trailing comma
+};
+
+
+
+var x = 1;;
+
+function foo() {
+
+	var iframe = document.getElementById("testiframe");
+	iframe.contentWindow.postMessage("secret", "*"); 
+
+	window.addEventListener("message", function(event) { // Noncompliant: no checks are done on the origin property.
+	console.log(event.data);
+});
+};
+
 var Car = function(brand, model, year) {
 	this.brand = brand;
 	this.model = model;
@@ -11,6 +30,7 @@ Car.prototype = {
 	getFullName : function() {
 		return this.brand + ' ' + this.model + ' ' + 'Y: ' + this.year;
 	},
+	
 
 	calculatePrice : function() {
 		if (this.year < 1990) {
